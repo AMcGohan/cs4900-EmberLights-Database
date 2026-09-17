@@ -1,4 +1,4 @@
-# Emberlights Database
+# Emberlights Database - Conceptual Model
 ## Group Conceptual Model
 ![Group Conceptual Model](GroupConceptualModel.png)
 
