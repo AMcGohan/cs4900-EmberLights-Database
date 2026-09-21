@@ -7,8 +7,9 @@
 - Normalization: Normalization levels describe sets of rules to establish data safety and reduce redundancy. 
 
 ## Group Conceptual Model
-![Group Conceptual Model](https://github.com/AMcGohan/cs4900-EmberLights-Database/tree/main/conceptual_model)
+[Group Conceptual Model](https://github.com/AMcGohan/cs4900-EmberLights-Database/tree/main/conceptual_model)
 
 ## Logical Model Diagram
+![mallia-lmh.png]
 
 ### Descripiton
