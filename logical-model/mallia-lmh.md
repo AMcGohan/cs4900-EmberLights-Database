@@ -10,7 +10,7 @@
 [Group Conceptual Model](https://github.com/AMcGohan/cs4900-EmberLights-Database/tree/main/conceptual_model)
 
 ## Logical Model Diagram
-![Logical Model Diagram](logical-model/mallia-lmh.png)
+![Logical Model Diagram](mallia-lmh.png)
 
 ### Descripiton
 This logical model consists of four tables. There are the original three from the conceptual model: Songs, Genres, and Playlists; as well as the intermediary table for the many-to-many relationship between Songs and Playlists: PlaylistSongs. 
