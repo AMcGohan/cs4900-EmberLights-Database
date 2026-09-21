@@ -10,6 +10,11 @@
 [Group Conceptual Model](https://github.com/AMcGohan/cs4900-EmberLights-Database/tree/main/conceptual_model)
 
 ## Logical Model Diagram
-![mallia-lmh.png]
+![Logical Model Diagram](logical-model/mallia-lmh.png)
 
 ### Descripiton
+This logical model consists of four tables. There are the original three from the conceptual model: Songs, Genres, and Playlists; as well as the intermediary table for the many-to-many relationship between Songs and Playlists: PlaylistSongs. 
+
+Songs and Playlists use a surrogate key as their primary key, and Genres uses the business ley of the genreName. PlaylistSongs uses a composite key of playlistID and songID as its primary Key.
+
+The genreName is references as a foreign key from both the Songs table and the Playlists table to establish the many to one relationship between them and songs. songID and playlistID are foreign keys in the PlaylistSongs table to establish the songs that are in a playlist. 
