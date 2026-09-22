@@ -11,3 +11,6 @@
     * Example: `Employees` are assigned to a `Manager` via a `manager_id`
 * Normalization
     * Process of reducing data redundancy to ensure data integrity
+
+[Link to Emberlights conceptual model](https://github.com/AMcGohan/cs4900-EmberLights-Database/tree/main/conceptual_model)
+
