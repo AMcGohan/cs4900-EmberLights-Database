@@ -1,0 +1,24 @@
+# Physical Model - Mallia
+## Decription of Components
+- Key Difference of the Physical Model to the Conceptual and Logical Models
+    - The **physical model** defines how the database will actually be implemented, whereas the **logical model** describes how data will be organizaed and accessed, and the **conceptual model** identifies what information we need and what the relationships between them are. 
+- Common Data Types
+    - Numeric
+        - int
+        - float / double
+        - decimal / numeric
+        - bigint
+    - String/Text
+        - varchar
+        - char
+        - text
+    - Date & Time
+        - date
+        - time
+        - datetime
+        - timestamp
+    - Boolean / bit
+- Default Values / Null Values
+    - These define what happens in a database when no value is passed in. If a *default value* is set, then the database will fill in that field with a specified fallback value. A NULL, is what occurs when there is no data. It is unknown or missing, not a value itself. If a field is nullable and no default value is set, a field will be set to NULL.
+- Check Constraints
+    - A DBA may set a check constraint on a field. A check constraint is a boolean validation that must be passed before the value is added to a database. An example of a check constraint may be that an integer `count` field must be greater than or equal to zero to be valid. 
