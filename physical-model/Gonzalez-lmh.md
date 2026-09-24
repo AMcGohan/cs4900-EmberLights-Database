@@ -40,3 +40,26 @@ Common data types include:
 - **BOOLEAN:** Represents true or false values. In MariaDB, BOOLEAN is an alias for TINYINT(1).
 
 For this physical model, INT UNSIGNED will be used for identifiers, VARCHAR for song and playlist names, TEXT for longer descriptions, and appropriate date and time types for temporal information.
+
+
+---
+
+### 3. Default Values and Null Values
+
+Default values and null constraints define how missing or unspecified data is handled in a database.
+
+**Default Values:**
+
+A default value is automatically assigned to a column when no value is provided during the insertion of a new record. Default values help maintain consistency and reduce the need to manually enter repetitive information.
+
+**Null Values:**
+
+NULL represents a missing or unknown value in a database. It is different from zero or an empty string.
+
+- **NULL:** Allows a column to contain missing or unknown information.
+- **NOT NULL:** Requires a column to contain a value.
+- **DEFAULT:** Provides a predefined value when no value is specified.
+
+In this physical model, primary keys and required attributes will use NOT NULL to ensure data integrity. Optional attributes, such as descriptions, may allow NULL values.
+
+Default values will be used where appropriate, such as automatically recording the creation date of a playlist.
