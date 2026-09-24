@@ -63,3 +63,19 @@ NULL represents a missing or unknown value in a database. It is different from z
 In this physical model, primary keys and required attributes will use NOT NULL to ensure data integrity. Optional attributes, such as descriptions, may allow NULL values.
 
 Default values will be used where appropriate, such as automatically recording the creation date of a playlist.
+
+
+---
+
+### 4. Check Constraints
+
+Check constraints are rules that restrict the values allowed in a database column. They ensure that data satisfies specific conditions before it can be inserted or updated.
+
+Here, the CHECK constraint is used to validate data and maintain data integrity. If a value does not satisfy the condition, the database rejects the operation.
+
+Examples of check constraints include:
+
+- Ensuring that a song duration is greater than zero.
+- Ensuring that a numeric rating is within an allowed range.
+- Preventing negative values in columns where only positive values are valid.
+
