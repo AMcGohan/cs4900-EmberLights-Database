@@ -44,8 +44,7 @@ These constraints prevent invalid data from being stored.
 
 ## Gonzalez-Physical Model
 
-![Gonzalez-Physical Model](<img width="1526" height="722" alt="physical-model" src="https://github.com/user-attachments/assets/c876a302-014f-4d69-a089-e56c34be273a" />
-)
+![Gonzalez - Physical Model](<img width="1526" height="722" alt="physical-model" src="https://github.com/user-attachments/assets/c876a302-014f-4d69-a089-e56c34be273a" />)
 
 ---
 
