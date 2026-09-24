@@ -1,81 +1,69 @@
-# EmberLights - Physical Model
+# Gonzalez - Physical Model
+
 ---
+
 ## Group Logical Model
 
-The physical model is based on the logical model developed by the EmberLights group.
-
-[View the Group Logical Model](https://github.com/AMcGohan/cs4900-EmberLights-Database/tree/main/logical_model)
-
+[View Group Logical Model](https://github.com/AMcGohan/cs4900-EmberLights-Database/tree/main/logical_model)
 
 ---
 ## Physical Model Components
 
 ### 1. Difference Between Conceptual, Logical, and Physical Models
 
-The conceptual model provides a high-level overview of the database, identifying the main entities and their relationships without including implementation details.
+The conceptual model identifies the main entities and their relationships.
 
-The logical model defines the structure of the database in more detail, including tables, attributes, primary keys, foreign keys, and relationships. It is independent of any specific database management system.
+The logical model defines the tables, attributes, primary keys, foreign keys, and relationships without depending on a specific database system.
 
-The physical model describes how the database will be implemented in a specific database management system. It includes tables, columns, data types, primary and foreign keys, default values, null constraints, and check constraints.
-
-For this project it converts the group's logical model into a database structure that can be implemented using MariaDB-supported data types and constraints.
-
-
----
+The physical model defines how the database will be implemented, including specific data types, constraints, and default values. For our project, we are using MariaDB.
 
 ### 2. Common Data Types
 
-Data types define the kind of information that can be stored in each column of a database table. Choosing appropriate data types helps maintain data integrity and use storage efficiently.
-
-Common data types include:
-
-- **INT:** Stores whole numbers. It is commonly used for primary keys and foreign keys.
-- **VARCHAR(n):** Stores variable-length text with a maximum length of n characters. It is useful for names, titles, and email addresses.
-- **CHAR(n):** Stores fixed-length character strings.
-- **TEXT:** Stores longer text, such as descriptions.
-- **DECIMAL(p,s):** Stores exact numeric values with a specified precision and scale.
-- **DATE:** Stores a date in YYYY-MM-DD format.
-- **DATETIME:** Stores both date and time values.
-- **TIMESTAMP:** Stores date and time values and can be used to track when records are created or updated.
-- **BOOLEAN:** Represents true or false values. In MariaDB, BOOLEAN is an alias for TINYINT(1).
-
-For this physical model, INT UNSIGNED will be used for identifiers, VARCHAR for song and playlist names, TEXT for longer descriptions, and appropriate date and time types for temporal information.
-
-
----
+- **INT:** Stores whole numbers.
+- **VARCHAR(n):** Stores text with a maximum length.
+- **TEXT:** Stores longer text.
+- **DECIMAL:** Stores exact decimal numbers.
+- **DATE:** Stores dates.
+- **TIMESTAMP:** Stores date and time values.
 
 ### 3. Default Values and Null Values
 
-Default values and null constraints define how missing or unspecified data is handled in a database.
-
-**Default Values:**
-
-A default value is automatically assigned to a column when no value is provided during the insertion of a new record. Default values help maintain consistency and reduce the need to manually enter repetitive information.
-
-**Null Values:**
-
-NULL represents a missing or unknown value in a database. It is different from zero or an empty string.
-
-- **NULL:** Allows a column to contain missing or unknown information.
-- **NOT NULL:** Requires a column to contain a value.
-- **DEFAULT:** Provides a predefined value when no value is specified.
-
-In this physical model, primary keys and required attributes will use NOT NULL to ensure data integrity. Optional attributes, such as descriptions, may allow NULL values.
-
-Default values will be used where appropriate, such as automatically recording the creation date of a playlist.
-
-
----
+A DEFAULT value is automatically used when no value is provided for a column. NULL means that a value is missing or unknown, while NOT NULL requires the column to have a value. In our model, required fields use NOT NULL. We also use CURRENT_TIMESTAMP for the creation time of playlists and a default value of 0 for the number of songs.
 
 ### 4. Check Constraints
 
-Check constraints are rules that restrict the values allowed in a database column. They ensure that data satisfies specific conditions before it can be inserted or updated.
+CHECK constraints are used to make sure that values meet certain conditions.
 
-Here, the CHECK constraint is used to validate data and maintain data integrity. If a value does not satisfy the condition, the database rejects the operation.
+Examples:
+- Song duration must be greater than 0.
+- The number of songs in a playlist cannot be negative.
 
-Examples of check constraints include:
+These constraints prevent invalid data from being stored.
 
-- Ensuring that a song duration is greater than zero.
-- Ensuring that a numeric rating is within an allowed range.
-- Preventing negative values in columns where only positive values are valid.
+---
 
+## Gonzalez-Physical Model
+
+![Gonzalez - Physical Model](<img width="1526" height="722" alt="physical-model" src="https://github.com/user-attachments/assets/65806b42-0fd1-487e-b7a1-a443374f7103" />)
+
+---
+
+## Physical Model Description
+
+This physical model contains five tables: Album, Songs, Genres, Playlists, and PlaylistSongs.
+
+### Tables
+
+- **Album:** Stores the album name and artist name. Each album can contain multiple songs.
+
+- **Genres:** Stores the available music genres. It is referenced by Songs and Playlists.
+
+- **Songs:** Stores song information, including its name, duration, album, and genre. Each song belongs to one album and one genre.
+
+- **Playlists:** Stores playlist information, including its name, genre, creation time, and number of songs.
+
+- **PlaylistSongs:** Connects songs and playlists using a composite primary key (songID, playlistID). This allows a song to appear in multiple playlists and a playlist to contain multiple songs.
+
+### Relationships and Constraints
+
+The model includes five foreign key relationships connecting the tables. Primary keys uniquely identify each record, while foreign keys maintain the relationships between tables. This model includes NOT NULL for required fields, AUTO_INCREMENT for IDs, DEFAULT values for some columns, and CHECK constraints to prevent invalid values. The genre is assigned to individual songs rather than albums because an album may contain songs from different genres.
