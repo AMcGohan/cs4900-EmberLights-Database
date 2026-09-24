@@ -26,7 +26,7 @@ Check constraints are used to limit what information can be put into a column.  
 Our logical model can be found [here](../logical_model/README.md)
 ## Physical
 This is my design for our physical model
-![physical model](images/PhysicalMOdel.png)
+![physical model](images/PhysicalModel.png)
 First is the genre table.  This table is very simple only having an id that is an int that is used to uniquely identify each genre.  As well it as a varchar for the name of the genre.  
 This genre table is used as foreign key in first the playlist table.  This table similarly uses a int for its playlist id and a varchar for its the name of the playlist.  It has the foreign key from the genre table.  Then it will use timestamp for the creation time to get the exact time the playlist was created.  This uses the default time stamp so the exact time doesn't need to be inputted. Finally a tinyint is used for the number of songs because the value doesn't need to be huge.  
 Next is the album table that uses an int for its id and varchar for the album name and artist name.  
