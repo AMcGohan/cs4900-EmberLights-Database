@@ -1,0 +1,34 @@
+Table Songs {
+  songID int [pk, increment, not null]
+  songName varchar(100) [not null]
+  genreID int [not null, ref: > Genres.genreID]
+  songDuration int [not null, check: `songDuration > 0`]
+  albumID int [not null, ref: > Album.albumID] 
+}
+
+Table Genres {
+  genreID int [pk, increment, not null]
+  genreName varchar(30) [not null]
+}
+
+Table Playlists {
+  playlistID int [pk, increment, not null]
+  playlistName varchar(50) [not null]
+  genreID int [not null, ref: > Genres.genreID]
+  creationTime timestamp [not null, default: `CURRENT_TIMESTAMP`]
+  numberSongs int [not null, default: 0, check: `numberSongs >= 0`]
+}
+
+Table PlaylistSongs {
+  playlistID int [not null, ref: > Playlists.playlistID]
+  songID int [not null, ref: > Songs.songID]
+  indexes {
+    (playlistID, songID) [pk]
+  }
+}
+
+Table Albums {
+  albumID int [pk, increment, not null]
+  albumName varchar(100) [not null]
+  artistName varchar(60) [not null]
+}
