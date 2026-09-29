@@ -4,8 +4,8 @@ USE music_app;
 
 CREATE TABLE Albums(
     albumID int AUTO_INCREMENT NOT NULL,
-    albumName varchar(255) NOT NULL,
-    artistName varchar(255) NOT NULL,
+    albumName varchar(100) NOT NULL,
+    artistName varchar(60) NOT NULL,
     PRIMARY KEY(album_id)
 );
 
