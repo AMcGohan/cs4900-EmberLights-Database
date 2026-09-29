@@ -37,4 +37,6 @@ Some examples of database users:
 [Link to Group Physical Model](../physical_model/README.md)
 
 [Link to Database SQL Script](music_app.sql)
-
+    * Script creates a database named `music_app` and creates 5 tables according to the group physical model.
+    * All Primary keys use `AUTO_INCREMENT` to ensure unique keys among objects
+    * All Foreign Keys are referenced to their original tables
