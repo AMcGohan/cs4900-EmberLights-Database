@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS Playlists (
     playlistName    VARCHAR(50)                             NOT NULL,
     genreID         INT                                     NOT NULL,
     creationTime    DATETIME                                NOT NULL    DEFAULT CURRENT_TIMESTAMP,
-    numberSongs     TINYINT NOT NULL                                    DEFAULT 10      CHECK (numberSongs >= 0),
+    numberSongs     TINYINT NOT NULL                                    DEFAULT 10                  CHECK (numberSongs >= 0),
 
     CONSTRAINT fk_playlists_genre
         FOREIGN KEY (genreID)
