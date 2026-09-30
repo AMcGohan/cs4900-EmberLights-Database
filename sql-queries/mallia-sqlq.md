@@ -60,3 +60,5 @@ WHERE PlaylistSongs.playlistID = 1
 Selects a playlist from the playlistSongs table and joins in Playlists to get the name of the playlist and Songs to get the duration value. Then, it converts the song duration to seconds so it can be summed cleanly. Then it converts the duration back to a time and displays it as PlaylistDuration.
 
 Tells you the total duration of a playlist. 
+
+### For mock data, see [db_init](../physicaldb/db_init.sql) in this branch!
