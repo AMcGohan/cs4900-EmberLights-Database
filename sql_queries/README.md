@@ -1,4 +1,10 @@
 # Group Database Queries
+## Group Physical Model
+[Group Physical Model](https://github.com/AMcGohan/cs4900-EmberLights-Database/tree/main/physical_model)
+
+## Group DB_Init
+[Group DB Init](https://github.com/AMcGohan/cs4900-EmberLights-Database/tree/main/db_init_scripts)
+
 ## Queries
 ### Get Songs in a Specific Playlist
 ```
