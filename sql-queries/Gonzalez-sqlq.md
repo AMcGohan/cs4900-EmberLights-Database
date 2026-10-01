@@ -41,7 +41,7 @@ Indexes help the database find information faster without searching through ever
 
 ---
 
-## Business Queries
+## Queries
 
 ### 1. Find Songs by Artist
 
