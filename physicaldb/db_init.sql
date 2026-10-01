@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS Songs (
     CONSTRAINT      fk_songs_albums
         FOREIGN KEY (albumID)
         REFERENCES  Albums(albumID)
-        ON DELETE CASCADE
+        ON DELETE RESTRICT
 );
 
 CREATE TABLE IF NOT EXISTS Playlists (
@@ -49,11 +49,11 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
     CONSTRAINT fk_playlistsongs_playlists
         FOREIGN KEY (playlistID)
         REFERENCES Playlists(playlistID)
-        ON DELETE CASCADE,
+        ON DELETE RESTRICT,
     CONSTRAINT fk_playlistsongs_songs
         FOREIGN KEY (songID)
         REFERENCES Songs(songID)
-        ON DELETE CASCADE
+        ON DELETE RESTRICT
 );
 
 
