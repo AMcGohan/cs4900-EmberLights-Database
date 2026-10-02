@@ -49,3 +49,19 @@ WHERE PlaylistSongs.playlistID = 1 -- or desired playlist
 Selects a playlist from the playlistSongs table and joins in Playlists to get the name of the playlist and Songs to get the duration value. Then, it converts the song duration to seconds so it can be summed cleanly. Then it converts the duration back to a time and displays it as PlaylistDuration.
 
 Tells you the total duration of a playlist. 
+
+### Sort playlist songs by duration
+```
+SELECT songName FROM Songs
+JOIN PlaylistSongs ON Songs.songID = PlaylistSongs.songID
+JOIN Playlists ON PlaylistSongs.playlistID = Playlists.playlistID
+WHERE Playlists.playlistID = 1
+ORDER BY songDuration ASC;
+```
+This join statement will look at a playlist and grab all of the songs from it and sort the songs in it by their duration
+
+### Display number of playlist a user has made
+```
+SELECT COUNT(*) FROM Playlists;
+```
+This can be used to find out the number of playlist that a user has
