@@ -6,6 +6,20 @@
 [Group DB Init](https://github.com/AMcGohan/cs4900-EmberLights-Database/tree/main/db_init_scripts)
 
 ## Queries
+
+### Business Questions
+[How do I retrieve all songs that are included in a user-created playlist?](#get-songs-in-a-specific-playlist)
+
+[How do I retrieve all songs that are included in a specific album?](#get-songs-in-a-specific-album)
+
+[How do I retrieve the total duration of a playlist?](#get-total-duration-of-a-playlist)
+
+[How do I retrieve all songs in a playlist sorted by the song duration?](#sort-playlist-songs-by-duration)
+
+[How do I retrieve the number of all user-created playlists?](#display-number-of-playlist-a-user-has-made)
+
+[How do I retrieve all songs created by a specific artist?](#find-songs-by-artist)
+
 ### Get Songs in a Specific Playlist
 ```
 -- songs in a playlist (Change where clause to switch playlists)
