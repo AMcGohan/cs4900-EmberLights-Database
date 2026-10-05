@@ -1,16 +1,22 @@
 # Database Container
-Initialize the database
-- Clone the repository
-- Navigate to this directory
-- run `docker compose up`
-- Open `dbeaver`
-- Connect to port `3320` with username `user` and password `password`
+
+## How to initialize the database
+1. Clone this repository to your local machine/server
+2. Navigate to this directory
+3. In the terminal, run `docker compose up`
+4. Once the database is ready to accept incoming connections, open `DBeaver` and connect to the server using the given default values:
+  - Database: `MariaDB`
+  - Default port: `3320`
+  - Default username: `user`
+  - Default password: `password`
+
+## Post Initialization
 
 Start the database
-- run `docker compose start`
+- run `docker compose start` in this directory
 
 Stop the database
-- run `docker compose stop`
+- run `docker compose stop` in this directory
 
-Wipe the container entirely
-- run `docker compose down`
+Purge container volume
+- run `docker compose down` in this directory
