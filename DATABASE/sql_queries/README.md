@@ -8,21 +8,22 @@
 ## Queries
 
 ### Business Questions
-[How do I retrieve all songs that are included in a user-created playlist?](#get-songs-in-a-specific-playlist)
 
-[How do I retrieve all songs that are included in a specific album?](#get-songs-in-a-specific-album)
+* [How do I retrieve all songs that are included in a user-created playlist?](#get-songs-in-a-specific-playlist)
 
-[How do I retrieve the total duration of a playlist?](#get-total-duration-of-a-playlist)
+* [How do I retrieve all songs that are included in a specific album?](#get-songs-in-a-specific-album)
 
-[How do I retrieve all songs in a playlist sorted by the song duration?](#sort-playlist-songs-by-duration)
+* [How do I retrieve the total duration of a playlist?](#get-total-duration-of-a-playlist)
 
-[How do I retrieve the number of all user-created playlists?](#display-number-of-playlist-a-user-has-made)
+* [How do I retrieve all songs in a playlist sorted by the song duration?](#sort-playlist-songs-by-duration)
 
-[How do I retrieve all songs created by a specific artist?](#find-songs-by-artist)
+* [How do I retrieve the number of all user-created playlists?](#display-number-of-playlist-a-user-has-made)
 
-[How do I retrieve the number of songs that belong to a specific genre?](#number-of-songs-by-genre)
+* [How do I retrieve all songs created by a specific artist?](#find-songs-by-artist)
 
-[How do I retrieve all playlists that contain at least one song from a specific artist?](#number-of-songs-by-genre)
+* [How do I retrieve the number of songs that belong to a specific genre?](#number-of-songs-by-genre)
+
+* [How do I retrieve all playlists that contain at least one song from a specific artist?](#number-of-songs-by-genre)
 
 ### Get Songs in a Specific Playlist
 ```
