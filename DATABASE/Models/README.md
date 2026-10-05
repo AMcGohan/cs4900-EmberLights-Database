@@ -53,5 +53,3 @@ The final physical model contains the following tables:
 - Genres
 - Playlists
 - PlaylistSongs
-
-The DBML source code used to create the physical model is also included with the database files.
