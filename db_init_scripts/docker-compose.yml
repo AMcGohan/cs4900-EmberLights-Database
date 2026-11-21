@@ -10,6 +10,9 @@ services:
       # change init_mr_fix_it.sql to your DB init script name - leave everything else
       - ./db_init.sql:/docker-entrypoint-initdb.d/init.sql
       # - ./data:/var/lib/mysql                   # Mount a volume for data persistence (optional)
+      # Auto load data dump from init script
+      - ./emberlights_seed.sql:/docker-entrypoint-initdb.d/02-seed.sql
+
     environment:
       - MYSQL_ROOT_PASSWORD=password
       # Recommend making this table name the same as the table name in your script.  Does not actually matter

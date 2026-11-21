@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
         ON DELETE RESTRICT
 );
 
-
+/*
 INSERT INTO Genres (genreName) VALUES 
     ( 'Rock' ),
     ( 'Pop' ),
@@ -149,3 +149,4 @@ INSERT INTO PlaylistSongs (playlistID, songID) VALUES
     (4, 8),  -- Santiana
     (4, 21), -- Hard Times Come Again No More
     (4, 22); -- The Workers Song
+*/
